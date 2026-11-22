@@ -6,7 +6,7 @@
 package me.zhanghai.android.douya.item.ui;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import me.zhanghai.android.douya.R;
 import me.zhanghai.android.douya.network.api.info.frodo.CollectableItem;

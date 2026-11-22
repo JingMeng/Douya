@@ -7,8 +7,7 @@
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="me.zhanghai.android.douya">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
 
@@ -49,7 +48,7 @@
             android:theme="@style/Theme.Douya.Translucent" />
 
         <activity
-            android:name=".link.UriHandlerActivity"
+            android:name=".link.UriHandlerActivity" android:exported="true"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:theme="@style/Theme.Douya.Translucent">
@@ -84,7 +83,7 @@
             android:theme="@style/Theme.Douya.Gallery" />
 
         <activity
-            android:name=".main.ui.MainActivity"
+            android:name=".main.ui.MainActivity" android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Douya.MainActivity.ColdStart">
@@ -99,7 +98,7 @@
             android:theme="@style/Theme.Douya" />
 
         <activity
-            android:name=".broadcast.ui.SendBroadcastActivity"
+            android:name=".broadcast.ui.SendBroadcastActivity" android:exported="true"
             android:label="@string/broadcast_send_intent_filter_title"
             android:theme="@style/Theme.Douya.DialogWhenLarge"
             android:windowSoftInputMode="adjustResize|stateVisible">
@@ -219,7 +218,7 @@
         </activity>
 
         <service
-            android:name=".account.app.AuthenticatorService"
+            android:name=".account.app.AuthenticatorService" android:exported="true"
             tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
@@ -235,13 +234,13 @@
 
         <service android:name=".media.PlayMusicService" />
 
-        <receiver android:name=".media.MediaButtonReceiver">
+        <receiver android:name=".media.MediaButtonReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".calendar.app.CalendarAppWidgetProvider" >
+        <receiver android:name=".calendar.app.CalendarAppWidgetProvider" android:exported="true" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -270,3 +269,4 @@
             android:value="dc160e13d1b3c3e917e331e8b272c51a523d8599" />
     </application>
 </manifest>
+

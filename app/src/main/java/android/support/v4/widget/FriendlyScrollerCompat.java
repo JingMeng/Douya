@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package android.support.v4.widget;
+package androidx.core.widget;
 
 import android.content.Context;
 import android.os.Build;

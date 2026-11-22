@@ -6,7 +6,7 @@
 package me.zhanghai.android.douya.ui;
 
 import android.content.Context;
-import android.support.design.widget.ExpandedHintTextInputLayout;
+import com.google.android.material.textfield.ExpandedHintTextInputLayout;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;

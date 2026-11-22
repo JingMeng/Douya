@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package android.support.design.widget;
+package com.google.android.material.textfield;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -34,16 +34,16 @@ public class ExpandedHintTextInputLayout extends TextInputLayout {
     }
 
     private void init() {
-        mCollapsingTextHelper.setCollapsedTextAppearance(R.style.TextAppearance_AppCompat_Caption);
+        setHintTextAppearance(R.style.TextAppearance_AppCompat_Caption);
         mHasTextEditText = new EditText(getContext());
         mHasTextEditText.setText(" ");
     }
 
     @Override
-    void updateLabelState(boolean animate, boolean force) {
-        EditText editText = mEditText;
-        mEditText = mHasTextEditText;
-        super.updateLabelState(animate, force);
-        mEditText = editText;
+    void updateLabelState(boolean animate) {
+        EditText actualEditText = editText;
+        editText = mHasTextEditText;
+        super.updateLabelState(animate);
+        editText = actualEditText;
     }
 }

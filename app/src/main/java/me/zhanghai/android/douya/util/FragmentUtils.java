@@ -6,9 +6,9 @@
 package me.zhanghai.android.douya.util;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 public class FragmentUtils {
 
@@ -82,7 +82,7 @@ public class FragmentUtils {
 
     @Deprecated
     public static void add(Fragment fragment, FragmentManager fragmentManager, String tag) {
-        // Pass 0 as in {@link android.support.v4.app.BackStackRecord#add(Fragment, String)}.
+        // Pass 0 as in {@link androidx.core.app.BackStackRecord#add(Fragment, String)}.
         //noinspection deprecation
         add(fragment, fragmentManager, 0, tag);
     }
@@ -151,7 +151,7 @@ public class FragmentUtils {
 
     @Deprecated
     public static void replace(Fragment fragment, FragmentManager fragmentManager, String tag) {
-        // Pass 0 as in {@link android.support.v4.app.BackStackRecord#replace(Fragment, String)}.
+        // Pass 0 as in {@link androidx.core.app.BackStackRecord#replace(Fragment, String)}.
         //noinspection deprecation
         replace(fragment, fragmentManager, 0, tag);
     }

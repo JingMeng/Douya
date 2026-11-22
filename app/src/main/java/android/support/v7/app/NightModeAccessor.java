@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package android.support.v7.app;
+package androidx.appcompat.app;
 
 import android.content.res.Resources;
 
@@ -12,11 +12,12 @@ public class NightModeAccessor {
     private NightModeAccessor() {}
 
     public static boolean flushResources(Resources resources) {
-        return ResourcesFlusher.flush(resources);
+        ResourcesFlusher.flush(resources);
+        return true;
     }
 
     public static int mapNightMode(AppCompatDelegate delegate, int mode) {
         // We don't care about APIs below 14.
-        return ((AppCompatDelegateImplV14) delegate).mapNightMode(mode);
+        return ((AppCompatDelegateImpl) delegate).mapNightMode(mode);
     }
 }

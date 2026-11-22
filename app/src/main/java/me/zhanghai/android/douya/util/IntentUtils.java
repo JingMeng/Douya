@@ -120,7 +120,7 @@ public class /**/IntentUtils {
                 captureOutputFile, context));
     }
 
-    // TODO: Use android.support.v4.app.ShareCompat ?
+    // TODO: Use androidx.core.app.ShareCompat ?
 
     // NOTE: Before Build.VERSION_CODES.JELLY_BEAN htmlText will be no-op.
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

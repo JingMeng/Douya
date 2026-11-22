@@ -6,6 +6,7 @@
   -->
 
 <resources>
+    <attr name="textColorError" format="color|reference" />
 
     <attr name="darkTheme" format="reference" />
     <attr name="colorPrimaryDarkWithoutSystemWindowScrim" format="color" />
@@ -48,6 +49,6 @@
 
     <declare-styleable name="TintDrawablesTextView">
         <attr name="drawableTint" format="color" />
-        <attr name="drawableTintMode" format="color" />
+        <attr name="drawableTintMode" />
     </declare-styleable>
 </resources>
